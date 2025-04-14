@@ -1,0 +1,170 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100%;
+    padding: 20px;
+}
+
+h1 {
+    color: #333;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-bottom: 20px;
+}
+/*.container {
+    max-width: 1200px;
+    width: 100%;
+    padding: 20px;
+    background-color: #fff;
+    border: 0px solid #8b8a8d;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}*/
+.image-container {
+    position: relative;
+    text-align: right;
+    margin-bottom: 20px;
+}
+.form-image {
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    display: block;
+    width: 1850px;
+    height: 200px; 
+}
+
+/* Text Over Image */
+.image-text {
+    position: absolute;
+    top: 50%;
+    left: 33%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 48px;
+    font-weight: bold;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    z-index: 0;
+}
+fieldset {
+    border: 1.5px solid #8b8a8d;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    max-width: 800px; 
+    margin: 0 auto; 
+}
+
+.form-title {
+    font-size: 24px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    color: #000000;
+    text-align: center; 
+    margin-bottom: 20px; 
+}
+
+#doctorForm {
+    background-image: url('./images/docwall.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+    background-color: #f8f7f7;
+    padding-bottom: 18px;
+    padding-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%; 
+}
+.doc-image{
+    opacity: 0.5;
+    width: 1800px;
+    height: 500px;
+}
+
+input[type="text"],input[type="email"],input[type="tel"],input[type="number"],select,textarea {
+    width: 100%;
+    margin-left: 10px;
+    margin-top: 5px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    width: 400px;
+    height: 43px;
+  
+    
+}
+textarea{
+    overflow: auto;
+    height: 100px;
+}
+
+td {
+    padding: 8px;
+}
+
+.button-container {
+    text-align: center; 
+    margin-top: 20px;
+}
+.submit, .reset {
+    color: #fff;
+    padding: 13px 45px;
+    border: none;
+    border-radius: 20px;
+    margin: 0 15px; 
+    font-size: 15px;
+    font-weight: 100;
+    cursor: pointer;
+}
+
+.submit {
+    background: linear-gradient(90deg, #be9973, #d4c0ac);
+}
+
+.reset {
+    background: linear-gradient(90deg, #960a00, #db4444);
+}
+
+.submit:hover, .reset:hover {
+    opacity: 0.7;
+}
+.form-columns {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space between columns */
+    gap: 0px; /* Add gap between columns */
+}
+
+/* Left and Right Columns */
+.column {
+    width: 100%; /* Adjust width as needed */
+}
+table {
+    margin: 0 auto; 
+}
+
+/* View.php */
+fieldset {
+    border: 2px solid #e0e0e0;
+    border-radius: 15px;
+    padding: 30px;
+    background: #ffffff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+    margin-left: 11px;
+}
