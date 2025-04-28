@@ -106,7 +106,7 @@
             </div>
         </form>
     </div>
-    <script src="doctor.js"></script>
+    <!--<script src="doctor.js"></script>-->
 </body>
 </html>
 
