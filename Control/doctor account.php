@@ -7,7 +7,7 @@ include "../Model/view.php";
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Doctor Form</title>
-    <link rel="stylesheet" href="../Style/doct.css">
+    <link rel="stylesheet" href="../Style/doctor.css">
 </head>
 <body>
     <div class="container">
@@ -17,7 +17,7 @@ include "../Model/view.php";
         </div>
 
             <!-- Form with Background Image -->
-            <form id="doctorForm" action=" " method="POST" >
+            <form id="doctorForm" action=" " method="POST" enctype="multipart/form-data">
             <div class="form-title">Create an Account</div>
             <div class="form-columns">
                 <!-- Left Column -->
@@ -107,6 +107,10 @@ include "../Model/view.php";
                             <td><label for="additionalInfo">Additional Information:</label></td>
                             <td><textarea id="additionalInfo" name="additionalInfo" rows="4" cols="40" placeholder="Any additional details" ></textarea>
                             <p id="additionalInfoError" class="error-message"><?php echo $additionalInfoError; ?></p></td>
+                        </tr>
+                        <tr>
+                        <td><label for="upload"> Select file to upload:</label></td>
+                        <td><input type="file" name = "myfile" class="file-upload"></td>
                         </tr>
                     </table>
                 </div>

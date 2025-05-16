@@ -152,4 +152,12 @@ table {
     padding: 0 15px;
     color: red;
 }
+.file-upload {
+    width: 100%;
+    margin-left: 5px;
+    margin-top: 5px;
+    padding: 8px;
+    font-size: 14.5px;
+   
+}
 

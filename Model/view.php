@@ -3,9 +3,9 @@ $fnameError = $emailError = $phoneError = $specializationError = $clinicNameErro
 
 $fullName = $email = $phone = $specialization = $clinicName = $availableHours = $consultationFee = $experienceYears = $gender = $additionalInfo = "";
 
-if(isset($_REQUEST["submit"])) 
-{
-    if(isset($_REQUEST["submit"])) {
+    if(isset($_REQUEST["submit"])) 
+    {
+   
         if(empty($_REQUEST["fullName"])) {
             $fnameError = "Full Name is required";
         } else {
@@ -71,35 +71,37 @@ if(isset($_REQUEST["submit"]))
         } else {
             $additionalInfo = "";
         }
-        
+
+        // File upload
+        /*if (!empty($_FILES["myfile"]["name"] )) {
+            echo $_FILES["myfile"]["name"];
+        } else{
+            echo "No file is uploaded.";
+        }*/
+        if ($_FILES["myfile"]["name"] == "") {
+            echo "No file is uploaded.";
+        } else{
+            if(move_uploaded_file($_FILES["myfile"]["tmp_name"], "../Upload/".$_FILES["myfile"]["name"])){
+                echo "File uploaded successfully.";
+            }
+        }
+
         if(!empty($fullName) && !empty($email) && !empty($phone) && !empty($specialization) && !empty($clinicName) && !empty($availableHours) && !empty($consultationFee) && 
            !empty($experienceYears) && !empty($gender)) {
             
             echo "Form Submitted Successfully!<Br><Br><br>";
-            echo "Submitted Data:";
-            echo "<br>";
-            echo "<br>";
-            echo "Full Name: " . $fullName;
-            echo "<br>";
-            echo "Email: " . $email;
-            echo "<br>";
-            echo "Phone: " . $phone;
-            echo "<br>";
-            echo "Specialization: " . $specialization;
-            echo "<br>";
-            echo "Clinic Name: " . $clinicName;
-            echo "<br>";
-            echo "Available Hours: " . $availableHours;
-            echo "<br>";
-            echo "Consultation Fee: " . $consultationFee;
-            echo "<br>";
-            echo "Experience Years: " . $experienceYears;
-            echo "<br>";
-            echo "Gender: " . $gender;
-            echo "<br>";
-            echo "Additional Info: " . $additionalInfo;
-            echo "<br>";
-        }
+            echo "Submitted Data:"."<br>"."<br>";
+            echo "Full Name: " . $fullName ."<br>";           
+            echo "Email: " . $email ."<br>";           
+            echo "Phone: " . $phone ."<br>";           
+            echo "Specialization: " . $specialization ."<br>";           
+            echo "Clinic Name: " . $clinicName ."<br>";           
+            echo "Available Hours: " . $availableHours ."<br>";          
+            echo "Consultation Fee: " . $consultationFee ."<br>";          
+            echo "Experience Years: " . $experienceYears . "<br>";           
+            echo "Gender: " . $gender . "<br>";         
+            echo "Additional Info: " . $additionalInfo . "<br>";
+        
+        }   
     }
-}
 ?>
