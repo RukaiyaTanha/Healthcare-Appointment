@@ -1,4 +1,8 @@
 <?php
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+
 $fnameError = $emailError = $phoneError = $specializationError = $clinicNameError = $availableHoursError = $consultationFeeError = $experienceYearsError = $genderError = $additionalInfoError = "";
 
 $fullName = $email = $phone = $specialization = $clinicName = $availableHours = $consultationFee = $experienceYears = $gender = $additionalInfo = "";

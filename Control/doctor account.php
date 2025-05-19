@@ -1,5 +1,15 @@
 <?php
+session_start();
 include "../Model/view.php";
+
+if(!isset($_COOKIE["user"])) {
+    setcookie("user", "1", time() + 86400); 
+    echo "Welcome to the doctor account page!";
+} else {
+    echo "You have visited me before!";
+}
+$_SESSION['user'] = "doctor";
+echo $_SESSION['user'];
 ?>
 <!DOCTYPE html>
 <html>
@@ -17,7 +27,7 @@ include "../Model/view.php";
         </div>
 
             <!-- Form with Background Image -->
-            <form id="doctorForm" action=" " method="POST" enctype="multipart/form-data">
+            <form id="doctorForm" action="" method="POST" enctype="multipart/form-data">
             <div class="form-title">Create an Account</div>
             <div class="form-columns">
                 <!-- Left Column -->
