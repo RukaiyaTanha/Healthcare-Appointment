@@ -1,14 +1,14 @@
 <?php
 session_start();
-include "../Model/view.php";
+include "../Control/view.php";
 
 if(!isset($_COOKIE["user"])) {
     setcookie("user", "1", time() + 86400); 
-    echo "Welcome to the doctor account page!";
+    echo "Welcome to the doctor account page!  ";
 } else {
-    echo "You have visited me before!";
+    echo "You have visited me before!  ";
 }
-$_SESSION['user'] = "doctor";
+$_SESSION['user'] = "User";
 echo $_SESSION['user'];
 ?>
 <!DOCTYPE html>
@@ -17,7 +17,7 @@ echo $_SESSION['user'];
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Doctor Form</title>
-    <link rel="stylesheet" href="../Style/doctor.css">
+    <link rel="stylesheet" href="../Style/doct.css">
 </head>
 <body>
     <div class="container">
@@ -25,7 +25,6 @@ echo $_SESSION['user'];
             <img src="../images/doc.png" class="form-image">
             <div class="image-text">Online Healthcare Appointment</div>
         </div>
-
             <!-- Form with Background Image -->
             <form id="doctorForm" action="" method="POST" enctype="multipart/form-data">
             <div class="form-title">Create an Account</div>
@@ -38,10 +37,13 @@ echo $_SESSION['user'];
                             <td><label for="fullName">Full Name:</label></td>
                             <td><input type="text" id="fullName" name="fullName" placeholder="Enter your full name" >
                             <p id ="fnameError" class="error-message"><?php echo $fnameError; ?></p>
-                            
                         </td>
                         </tr>
-                       
+                       <tr>
+                            <td><label for="pass">Password:</label></td>
+                            <td><input type="password" id="pass" name="pass" placeholder="Enter your password" >          
+                            <p id="passError" class="error-message"><?php echo $passError; ?></p></td>              
+                        </tr>
                         <tr>
                             <td><label for="email">Email:</label></td>
                             <td><input type="text" id="email" name="email" placeholder="Enter your email" >
@@ -103,13 +105,15 @@ echo $_SESSION['user'];
                         <tr>
                             <td><label>Gender:</label></td>
                             <td>
-                                <input type="radio" id="male" name="gender" value="Male" >
-                                <label for="male">Male</label>
-                                <input type="radio" id="female" name="gender" value="Female">
-                                <label for="female">Female</label>
-                                <input type="radio" id="other" name="gender" value="Other">
-                                <label for="other">Other</label>
-                                <p id="genderError" class="error-message"><?php echo $genderError; ?></p>
+                               <div class="gender-options">
+                               <input type="radio" id="male" name="gender" value="Male">
+                               <label for="male">Male</label>
+                               <input type="radio" id="female" name="gender" value="Female">
+                               <label for="female">Female</label>
+                               <input type="radio" id="other" name="gender" value="Other">
+                               <label for="other">Other</label>
+                               </div>
+                               <p id="genderError" class="error-message"><?php echo $genderError; ?></p>
                             </td>
                         </tr>
                         
@@ -128,6 +132,10 @@ echo $_SESSION['user'];
             <div class="button-container">
                 <input type="submit" id="submit" name= "submit" class="submit" value="Submit">
                 <input type="reset" id="reset" name= "reset" class="reset new" value="Clear">
+            </div> 
+            <br>
+            <div> 
+            <center>Already have an account?<a href="../Control/logout.php">Login</a></center>
             </div> 
             </form> 
         </div>

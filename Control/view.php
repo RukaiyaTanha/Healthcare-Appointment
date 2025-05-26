@@ -2,10 +2,10 @@
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
+include "../Model/db.php";
+$fnameError = $passError =  $emailError = $phoneError = $specializationError = $clinicNameError = $availableHoursError = $consultationFeeError = $experienceYearsError = $genderError = $additionalInfoError = "";
 
-$fnameError = $emailError = $phoneError = $specializationError = $clinicNameError = $availableHoursError = $consultationFeeError = $experienceYearsError = $genderError = $additionalInfoError = "";
-
-$fullName = $email = $phone = $specialization = $clinicName = $availableHours = $consultationFee = $experienceYears = $gender = $additionalInfo = "";
+$fullName =  $pass = $email = $phone = $specialization = $clinicName = $availableHours = $consultationFee = $experienceYears = $gender = $additionalInfo = "";
 
     if(isset($_REQUEST["submit"])) 
     {
@@ -15,7 +15,11 @@ $fullName = $email = $phone = $specialization = $clinicName = $availableHours = 
         } else {
             $fullName = $_REQUEST["fullName"];
         }
-        
+        if(empty($_REQUEST["pass"])) {
+            $passError = "password is required";
+        } else {
+            $pass = $_REQUEST["pass"];
+        }
         if(empty($_REQUEST["email"])) {
             $emailError = "Email is required";
         } elseif (!filter_var($_REQUEST["email"], FILTER_VALIDATE_EMAIL)) {
@@ -90,12 +94,13 @@ $fullName = $email = $phone = $specialization = $clinicName = $availableHours = 
             }
         }
 
-        if(!empty($fullName) && !empty($email) && !empty($phone) && !empty($specialization) && !empty($clinicName) && !empty($availableHours) && !empty($consultationFee) && 
+        if(!empty($fullName) && !empty($pass) &&!empty($email) && !empty($phone) && !empty($specialization) && !empty($clinicName) && !empty($availableHours) && !empty($consultationFee) && 
            !empty($experienceYears) && !empty($gender)) {
             
             echo "Form Submitted Successfully!<Br><Br><br>";
             echo "Submitted Data:"."<br>"."<br>";
-            echo "Full Name: " . $fullName ."<br>";           
+            echo "Full Name: " . $fullName ."<br>";   
+            echo "Password: " . $pass ."<br>";          
             echo "Email: " . $email ."<br>";           
             echo "Phone: " . $phone ."<br>";           
             echo "Specialization: " . $specialization ."<br>";           
@@ -106,6 +111,11 @@ $fullName = $email = $phone = $specialization = $clinicName = $availableHours = 
             echo "Gender: " . $gender . "<br>";         
             echo "Additional Info: " . $additionalInfo . "<br>";
         
-        }   
+        } 
+        
+        $conobj=createCon();
+        if(insertData($conobj, $_REQUEST["fullName"],$_REQUEST["pass"], $_REQUEST["email"], $_REQUEST["phone"],$_FILES["myfile"]["name"])) 
+            echo "Data inserted successfully";
+        
     }
 ?>
