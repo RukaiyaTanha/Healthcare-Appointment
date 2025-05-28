@@ -16,6 +16,5 @@ $result = mysqli_query($conobj, $sql);
 if (mysqli_num_rows($result) > 0) {
     $doctorData = mysqli_fetch_assoc($result);
 }
-
 closeCon($conobj);
 ?>

@@ -22,10 +22,6 @@ include "../Control/profile_control.php";
             if (isset($doctorData)) { 
                 echo '
                 <div class="info-item">
-                    <span class="info-label">ID:</span>
-                    <span class="info-value">'.$doctorData['id'].'</span>
-                </div>
-                <div class="info-item">
                     <span class="info-label">Username:</span>
                     <span class="info-value">'.$doctorData['fullName'].'</span>
                 </div>
@@ -54,9 +50,10 @@ include "../Control/profile_control.php";
                 echo '
                 <div class="profile-actions">
                     <a href="edit_profile.php?id='.$doctorData['id'].'" class="btn edit-btn">Edit Profile</a>
-                    <form action="../Control/delete_profile.php" method="POST" onsubmit="return confirm(\'Are you sure you want to delete your profile?\');">
-                        <input type="hidden" name="id" value="'.$doctorData['id'].'">
-                        <button type="submit" class="btn delete-btn">Delete Profile</button>
+
+                    <form action="../Control/delete_profile.php" method="POST" onsubmit="return confirm(\'Are you sure you want to delete your profile?\');">    
+                    <input type="hidden" name="id" value="'.$doctorData['id'].'">
+                    <button type="submit" class="btn delete-btn">Delete Profile</button>
                     </form>
                 </div>';
             } else {

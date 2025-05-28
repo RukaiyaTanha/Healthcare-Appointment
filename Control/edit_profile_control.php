@@ -23,9 +23,9 @@ if (isset($_GET['id'])) {
     closeCon($conobj);
 }
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['update'])) {
+if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['update'])) {
     $conobj = createCon();
-    $id = $_POST['id'];
+    //$id = $_POST['id'];
     $fullName = $_POST['fullName'];
     $pass = $_POST['pass'];
     $email = $_POST['email'];

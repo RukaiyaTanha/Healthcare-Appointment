@@ -26,7 +26,7 @@ function deleteDoctor($conn, $id) {
     return mysqli_query($conn, $sql);
 }
 
-function updateDoctor($conn, $id, $fullName, $pass, $email, $phone, $file) {
+/*function updateDoctor($conn, $id, $fullName, $pass, $email, $phone, $file) {
     $sql = "UPDATE doctors SET 
             fullName='$fullName', 
             pass='$pass',
@@ -35,4 +35,4 @@ function updateDoctor($conn, $id, $fullName, $pass, $email, $phone, $file) {
             files='$file' 
             WHERE id=$id";
     return mysqli_query($conn, $sql);
-}
+}*/
