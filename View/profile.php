@@ -14,7 +14,7 @@ include "../Control/profile_control.php";
         <h2>Doctor Profile</h2>
         
         <div class="welcome">
-            Hello, <?php echo htmlspecialchars($_SESSION['user']); ?>
+            Hello, <?php echo $_SESSION['user']; ?>
         </div>
         
         <div class="profile-info">
@@ -23,31 +23,31 @@ include "../Control/profile_control.php";
                 echo '
                 <div class="info-item">
                     <span class="info-label">ID:</span>
-                    <span class="info-value">'.htmlspecialchars($doctorData['id']).'</span>
+                    <span class="info-value">'.$doctorData['id'].'</span>
                 </div>
                 <div class="info-item">
                     <span class="info-label">Username:</span>
-                    <span class="info-value">'.htmlspecialchars($doctorData['fullName']).'</span>
+                    <span class="info-value">'.$doctorData['fullName'].'</span>
                 </div>
                 <div class="info-item">
                     <span class="info-label">Password:</span>
-                    <span class="info-value">'.htmlspecialchars($doctorData['pass']).'</span>
+                    <span class="info-value">'.$doctorData['pass'].'</span>
                 </div>
                 <div class="info-item">
                     <span class="info-label">Email:</span>
-                    <span class="info-value">'.htmlspecialchars($doctorData['email']).'</span>
+                    <span class="info-value">'.$doctorData['email'].'</span>
                 </div>
                 
                 <div class="info-item">
                     <span class="info-label">Phone:</span>
-                    <span class="info-value">'.htmlspecialchars($doctorData['phone']).'</span>
+                    <span class="info-value">'.$doctorData['phone'].'</span>
                 </div>';
                 
                 if (!empty($doctorData['files'])) {
                     echo '
                     <div class="info-item">
                         <span class="info-label">Uploaded File:</span>
-                        <span class="info-value">'.htmlspecialchars($doctorData['files']).'</span>
+                        <span class="info-value">'.$doctorData['files'].'</span>
                     </div>';
                 }
                 

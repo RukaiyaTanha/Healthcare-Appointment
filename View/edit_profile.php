@@ -29,21 +29,21 @@ include "../Control/edit_profile_control.php";
                             <td><label for="fullName">Full Name:</label></td>
                             <td>
                                 <input type="text" id="fullName" name="fullName" 
-                                       value="<?php echo htmlspecialchars($doctor['fullName']); ?>" required>
+                                       value="<?php echo $doctor['fullName']; ?>" required>
                             </td>
                         </tr>
                         <tr>
                             <td><label for="pass">Password:</label></td>
                             <td>
                                 <input type="password" id="pass" name="pass" 
-                                       value="<?php echo htmlspecialchars($doctor['pass']); ?>" required>
+                                       value="<?php echo $doctor['pass']; ?>" required>
                             </td>
                         </tr>
                         <tr>
                             <td><label for="email">Email:</label></td>
                             <td>
                                 <input type="email" id="email" name="email" 
-                                       value="<?php echo htmlspecialchars($doctor['email']); ?>" required>
+                                       value="<?php echo $doctor['email']; ?>" required>
                             </td>
                         </tr>
                     </table>
@@ -56,12 +56,12 @@ include "../Control/edit_profile_control.php";
                             <td><label for="phone">Phone:</label></td>
                             <td>
                                 <input type="tel" id="phone" name="phone" 
-                                       value="<?php echo htmlspecialchars($doctor['phone']); ?>" required>
+                                       value="<?php echo $doctor['phone']; ?>" required>
                             </td>
                         </tr>
                         <tr>
                             <td><label>Current File:</label></td>
-                            <td><?php echo htmlspecialchars($doctor['files']); ?></td>
+                            <td><?php echo $doctor['files']; ?></td>
                         </tr>
                         <tr>
                             <td><label for="upload">Update file:</label></td>
