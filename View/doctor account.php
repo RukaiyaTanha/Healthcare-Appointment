@@ -17,7 +17,7 @@ echo $_SESSION['user'];
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Doctor Form</title>
-    <link rel="stylesheet" href="../Style/doct.css">
+    <link rel="stylesheet" href="../Style/doctor.css">
 </head>
 <body>
     <div class="container">
@@ -115,8 +115,7 @@ echo $_SESSION['user'];
                                </div>
                                <p id="genderError" class="error-message"><?php echo $genderError; ?></p>
                             </td>
-                        </tr>
-                        
+                        </tr>                     
                         <tr>
                             <td><label for="additionalInfo">Additional Information:</label></td>
                             <td><textarea id="additionalInfo" name="additionalInfo" rows="4" cols="40" placeholder="Any additional details" ></textarea>
@@ -135,7 +134,7 @@ echo $_SESSION['user'];
             </div> 
             <br>
             <div> 
-            <center>Already have an account?<a href="../Control/logout.php">Login</a></center>
+            <center>Already have an account?   <a href="../Control/logout.php">Login</a></center>
             </div> 
             </form> 
         </div>

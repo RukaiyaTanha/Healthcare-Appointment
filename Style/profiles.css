@@ -1,0 +1,107 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 20px;
+}
+.profile-container {
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+h2 {
+    color: #333;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.welcome {
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.logout-link {
+    display: inline-block;
+    padding: 8px 15px;
+    background: #dc3545;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-top: 20px;
+}
+.logout-link:hover {
+    background: #c82333;
+}
+/* Existing styles... */
+
+.profile-info {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.info-item {
+    margin-bottom: 15px;
+    display: flex;
+}
+
+.info-label {
+    font-weight: bold;
+    width: 120px;
+    color: #555;
+}
+
+.info-value {
+    flex: 1;
+}
+
+.profile-actions {
+    margin-top: 25px;
+    display: flex;
+    gap: 10px;
+}
+
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.edit-btn {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.edit-btn:hover {
+    background-color: #45a049;
+}
+
+.delete-btn {
+    background-color: #f44336;
+    color: white;
+}
+
+.delete-btn:hover {
+    background-color: #d32f2f;
+}
+
+.create-btn {
+    display: inline-block;
+    margin-top: 20px;
+    background-color: #2196F3;
+    color: white;
+    padding: 10px 20px;
+}
+
+.create-btn:hover {
+    background-color: #0b7dda;
+}

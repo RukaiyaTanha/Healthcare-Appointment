@@ -11,4 +11,3 @@ if(isset($_REQUEST["submit"])) {
         header("Location: ../View/profile.php");
     } 
 }
-    

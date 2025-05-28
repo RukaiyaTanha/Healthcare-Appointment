@@ -7,7 +7,7 @@ include "../Control/login_control.php";
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Doctor Form</title>
-    <link rel="stylesheet" href="../Style/doct.css">
+    <link rel="stylesheet" href="../Style/doctor.css">
 </head>
 <body>
     <div class="container">
@@ -34,7 +34,7 @@ include "../Control/login_control.php";
                 <div class="button-container">
                 <input type="submit" id="submit" name= "submit" class="submit" value="Submit">
                 <input type="reset" id="reset" name= "reset" class="reset new" value="Clear"><br><br>
-                <center>Don't have an account?<a href="../View/doctor account.php">Create an account</a></center>
+                <center>Don't have an account?    <a href="../View/doctor account.php">Create an account</a></center>
             </div>
             </div>
              

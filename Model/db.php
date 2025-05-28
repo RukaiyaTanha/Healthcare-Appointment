@@ -16,8 +16,23 @@ function checkLogin($conn, $fullName, $pass) {
     return mysqli_query($conn, $sql);
 }
 
-function fetchUser($conn, $fullName) {
+/*function fetchUser($conn, $fullName) {
     $sql = "SELECT * FROM doctors WHERE fullName='$fullName'";
+    return mysqli_query($conn, $sql);
+}*/
+
+function deleteDoctor($conn, $id) {
+    $sql = "DELETE FROM doctors WHERE id=$id";
     return mysqli_query($conn, $sql);
 }
 
+function updateDoctor($conn, $id, $fullName, $pass, $email, $phone, $file) {
+    $sql = "UPDATE doctors SET 
+            fullName='$fullName', 
+            pass='$pass',
+            email='$email', 
+            phone='$phone', 
+            files='$file' 
+            WHERE id=$id";
+    return mysqli_query($conn, $sql);
+}

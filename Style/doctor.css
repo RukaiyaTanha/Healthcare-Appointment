@@ -177,5 +177,20 @@ table {
     margin-left: 10px;
     margin-top: 5px;
 }
+.button-link {
+    display: inline-block;
+    text-align: center;
+    padding: 13px 45px;
+    border-radius: 20px;
+    background: linear-gradient(90deg, #960a00, #db4444);
+    color: #fff;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 100;
+    cursor: pointer;
+}
+.button-link:hover {
+    opacity: 0.7;
+}
 
 

@@ -79,13 +79,6 @@ $fullName =  $pass = $email = $phone = $specialization = $clinicName = $availabl
         } else {
             $additionalInfo = "";
         }
-
-        // File upload
-        /*if (!empty($_FILES["myfile"]["name"] )) {
-            echo $_FILES["myfile"]["name"];
-        } else{
-            echo "No file is uploaded.";
-        }*/
         if ($_FILES["myfile"]["name"] == "") {
             echo "No file is uploaded.";
         } else{
@@ -98,7 +91,7 @@ $fullName =  $pass = $email = $phone = $specialization = $clinicName = $availabl
            !empty($experienceYears) && !empty($gender)) {
             
             echo "Form Submitted Successfully!<Br><Br><br>";
-            echo "Submitted Data:"."<br>"."<br>";
+            /*echo "Submitted Data:"."<br>"."<br>";
             echo "Full Name: " . $fullName ."<br>";   
             echo "Password: " . $pass ."<br>";          
             echo "Email: " . $email ."<br>";           
@@ -109,8 +102,7 @@ $fullName =  $pass = $email = $phone = $specialization = $clinicName = $availabl
             echo "Consultation Fee: " . $consultationFee ."<br>";          
             echo "Experience Years: " . $experienceYears . "<br>";           
             echo "Gender: " . $gender . "<br>";         
-            echo "Additional Info: " . $additionalInfo . "<br>";
-        
+            echo "Additional Info: " . $additionalInfo . "<br>";*/
         } 
         
         $conobj=createCon();
