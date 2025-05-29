@@ -1,0 +1,41 @@
+body {
+    background-color: #f0f0f0;
+    text-align: center; /* Center the text inside the body */
+    margin: 0;
+    padding: 0;
+}
+
+#loginForm {
+    width: 300px;
+    margin: 100px auto;
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+
+
+
+
+.center {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    
+    border-radius: 5px;
+}
+
+#para1 {
+    width: 100%;
+    padding: 10px;
+    background-color: #3498db;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+
